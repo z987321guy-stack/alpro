@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpro (HK) International Limited | One-Stop Manufacturing Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .brand-font { font-family: 'Montserrat', sans-serif; }
+        .bg-alpro-red { background-color: #DC2626; }
+        .text-alpro-red { color: #DC2626; }
+        .border-alpro-red { border-color: #DC2626; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        }
+        
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .category-card:hover .overlay {
+            opacity: 1;
+        }
+        
+        .process-dot::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: #e2e8f0;
+            z-index: -1;
+        }
+        .process-dot:last-child::after { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-alpro-red flex items-center justify-center rounded">
+                    <span class="text-white font-bold text-xl">A</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="brand-font font-extrabold text-xl leading-none text-white transition-colors duration-300" id="nav-logo-text">ALPRO</span>
+                    <span class="text-[10px] tracking-widest text-slate-400 uppercase">International</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex gap-8 items-center font-semibold text-sm uppercase tracking-wider text-slate-300" id="nav-links">
+                <a href="#about" class="hover:text-alpro-red transition-colors">About</a>
+                <a href="#services" class="hover:text-alpro-red transition-colors">Capabilities</a>
+                <a href="#process" class="hover:text-alpro-red transition-colors">Process</a>
+                <a href="#partners" class="hover:text-alpro-red transition-colors">Partners</a>
+                <a href="#contact" class="bg-alpro-red text-white px-6 py-2 rounded hover:bg-red-700 transition-colors shadow-lg">Contact Us</a>
+            </div>
+
+            <button class="md:hidden text-white text-2xl" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-alpro-red/10 clip-path-polygon hidden lg:block" style="clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="text-white">
+                <span class="inline-block bg-alpro-red px-3 py-1 text-sm font-bold tracking-widest mb-6 rounded">SINCE 1993</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                    One-Stop <br>
+                    <span class="text-alpro-red italic">Manufacturing</span> <br>
+                    Solutions.
+                </h1>
+                <p class="text-xl text-slate-300 mb-10 max-w-lg leading-relaxed">
+                    Over 30 years of expertise in cross-material development. We specialize in Hardware, Glass, and Ceramics integration for global brands.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#services" class="bg-white text-slate-900 px-8 py-4 rounded font-bold hover:bg-slate-100 transition-all flex items-center gap-2">
+                        View Capabilities <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="border border-white/30 text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition-all">
+                        Request Quote
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block relative">
+                <div class="absolute -inset-10 bg-alpro-red/20 blur-[120px] rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Industrial Manufacturing" class="relative rounded-2xl shadow-2xl border border-white/10">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-slate-100 hidden lg:block">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-alpro-red/10 rounded-full flex items-center justify-center text-alpro-red text-xl">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div>
+                            <p class="text-slate-900 font-bold text-lg">ISO 9001</p>
+                            <p class="text-slate-500 text-sm">Certified Quality System</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Advantages -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-alpro-red font-bold tracking-widest uppercase mb-4">Core Advantages</h2>
+                <p class="text-4xl font-extrabold text-slate-900">Why Global Brands Choose Alpro</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="p-8 border-b-4 border-transparent hover:border-alpro-red hover:bg-slate-50 transition-all rounded-t-xl">
+                    <div class="text-4xl text-alpro-red mb-6"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">Cross-Material</h3>
+                    <p class="text-slate-600">30 years of expertise in integrating hardware, glass, and ceramic designs.</p>
+                </div>
+                <div class="p-8 border-b-4 border-transparent hover:border-alpro-red hover:bg-slate-50 transition-all rounded-t-xl">
+                    <div class="text-4xl text-alpro-red mb-6"><i class="fa-solid fa-arrows-to-circle"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">Integrated Delivery</h3>
+                    <p class="text-slate-600">Full-lifecycle management from R&D and design to global export.</p>
+                </div>
+                <div class="p-8 border-b-4 border-transparent hover:border-alpro-red hover:bg-slate-50 transition-all rounded-t-xl">
+                    <div class="text-4xl text-alpro-red mb-6"><i class="fa-solid fa-award"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">Quality Assured</h3>
+                    <p class="text-slate-600">Strictly implementing SGS, RoHS, and ISO 9001 quality management systems.</p>
+                </div>
+                <div class="p-8 border-b-4 border-transparent hover:border-alpro-red hover:bg-slate-50 transition-all rounded-t-xl">
+                    <div class="text-4xl text-alpro-red mb-6"><i class="fa-solid fa-microchip"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900">Precision Tech</h3>
+                    <p class="text-slate-600">Equipped with 400T die-casting and CNC centers for absolute accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities / Services -->
+    <section id="services" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-alpro-red font-bold tracking-widest uppercase mb-4">Our Capabilities</h2>
+                    <p class="text-4xl font-extrabold text-slate-900">Excellence in Material Engineering</p>
+                </div>
+                <p class="text-slate-500 max-w-sm">We provide tailored manufacturing solutions across multiple material categories.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Metal Card -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=600" alt="Metal Hardware" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-alpro-red text-white px-4 py-1 rounded text-sm font-bold">METAL</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Metal Hardware</h3>
+                        <p class="text-slate-600 mb-6">Zinc, Aluminum, Copper, and Iron engineering parts and decoration.</p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Die-casting & Forging
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Anodizing & PVD
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> CNC & Laser Cutting
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ceramics Card -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=600" alt="Ceramics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-alpro-red text-white px-4 py-1 rounded text-sm font-bold">CERAMICS</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Artistic Ceramics</h3>
+                        <p class="text-slate-600 mb-6">Home and outdoor decorative solutions focusing on craftsmanship.</p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Slip & High-pressure Casting
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Reactive & Underglaze
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Multi-material Bonding
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glass Card -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512418490979-92798ccc1380?auto=format&fit=crop&q=80&w=600" alt="Glassware" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-alpro-red text-white px-4 py-1 rounded text-sm font-bold">GLASS</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900">Craft Glassware</h3>
+                        <p class="text-slate-600 mb-6">Expertly combining traditional hand-craft with machine precision.</p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Hand & Machine Blown
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Mercury & Mosaic Finish
+                            </div>
+                            <div class="flex items-center gap-3 text-sm text-slate-500">
+                                <i class="fa-solid fa-check text-alpro-red"></i> Fire-polishing & Cutting
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- One-Stop Process -->
+    <section id="process" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-alpro-red font-bold tracking-widest uppercase mb-4">Work Flow</h2>
+                <p class="text-4xl font-extrabold text-slate-900">Seamless Service Journey</p>
+            </div>
+
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -translate-y-1/2"></div>
+                
+                <div class="grid md:grid-cols-5 gap-8 relative z-10">
+                    <div class="text-center bg-white p-4">
+                        <div class="w-16 h-16 bg-alpro-red text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Discovery</h3>
+                        <p class="text-sm text-slate-500">Technical Spec Alignment</p>
+                    </div>
+                    <div class="text-center bg-white p-4">
+                        <div class="w-16 h-16 bg-alpro-red text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Design</h3>
+                        <p class="text-sm text-slate-500">1-2 Weeks Prototyping</p>
+                    </div>
+                    <div class="text-center bg-white p-4">
+                        <div class="w-16 h-16 bg-alpro-red text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white">
+                            <i class="fa-solid fa-wrench"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Tooling</h3>
+                        <p class="text-sm text-slate-500">5-6 Weeks Molds & Trial</p>
+                    </div>
+                    <div class="text-center bg-white p-4">
+                        <div class="w-16 h-16 bg-alpro-red text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Production</h3>
+                        <p class="text-sm text-slate-500">4-5 Weeks Mass QC</p>
+                    </div>
+                    <div class="text-center bg-white p-4">
+                        <div class="w-16 h-16 bg-alpro-red text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl border-4 border-white">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 mb-2">Logistics</h3>
+                        <p class="text-sm text-slate-500">3-4 Weeks Shipping</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 bg-slate-900 rounded-2xl p-8 text-center text-white">
+                <div class="flex flex-wrap justify-center gap-12 text-sm font-bold tracking-widest uppercase">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-alpro-red"></i> IQC / IPQC / OQC</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-alpro-red"></i> EXW / FOB / DDP</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-vial text-alpro-red"></i> SGS / ROHS / FDA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-alpro-red font-bold tracking-widest uppercase mb-4">Our Partners</h2>
+                <p class="text-4xl font-extrabold text-slate-900">Trusted Globally</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">The Wonderful Company</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Teleflora</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">FIJI Water</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Suterra</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">LTD Commodities</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Justin</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Wonderful Pistachios</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Lakeside Collection</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Halos</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Water Pom</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Landmark</div>
+                <div class="bg-white p-6 rounded-lg flex items-center justify-center shadow-sm border border-slate-200 font-bold text-slate-400 text-center uppercase text-xs">Mpro Global</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-alpro-red font-bold tracking-widest uppercase mb-4">Contact Us</h2>
+                    <p class="text-4xl font-extrabold text-slate-900 mb-8">Ready to start <br>your project?</p>
+                    <p class="text-lg text-slate-600 mb-12">Contact our team in Taipei or Shenzhen for expert manufacturing consultation and global supply chain support.</p>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-alpro-red">
+                            <h3 class="font-bold text-xl mb-4 text-slate-900">Taipei Sales Office</h3>
+                            <div class="space-y-3 text-slate-600">
+                                <p class="flex items-center gap-3"><i class="fa-solid fa-user-tie text-alpro-red"></i> Brian Wang (王誠博)</p>
+                                <p class="flex items-center gap-3"><i class="fa-solid fa-phone text-alpro-red"></i> +886 0958-556616</p>
+                                <p class="flex items-center gap-3"><i class="fa-solid fa-envelope text-alpro-red"></i> brian_wang@alpro-intl.com.tw</p>
+                                <p class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-alpro-red mt-1"></i> Shilin Dist, Taipei City</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-slate-900">
+                            <h3 class="font-bold text-xl mb-4 text-slate-900">Shenzhen Headquarters</h3>
+                            <div class="space-y-3 text-slate-600">
+                                <p class="flex items-center gap-3"><i class="fa-solid fa-phone text-alpro-red"></i> +86 0755-27093971</p>
+                                <p class="flex items-center gap-3"><i class="fa-solid fa-envelope text-alpro-red"></i> alprosc@public.szptt.net.cn</p>
+                                <p class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-alpro-red mt-1"></i> Bao'an Dist, Shenzhen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-10 rounded-3xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-white mb-8">Quick Inquiry</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-slate-400 text-sm mb-2">Name</label>
+                                <input type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-alpro-red transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-slate-400 text-sm mb-2">Company</label>
+                                <input type="text" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-alpro-red transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-slate-400 text-sm mb-2">Email Address</label>
+                            <input type="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-alpro-red transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-slate-400 text-sm mb-2">Product Category</label>
+                            <select class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-alpro-red transition-colors">
+                                <option>Metal Hardware</option>
+                                <option>Art Ceramics</option>
+                                <option>Craft Glassware</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-slate-400 text-sm mb-2">Message</label>
+                            <textarea rows="4" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-alpro-red transition-colors"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-alpro-red text-white py-4 rounded-lg font-bold hover:bg-red-700 transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-alpro-red flex items-center justify-center rounded">
+                    <span class="text-white font-bold text-sm">A</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="brand-font font-bold text-lg leading-none text-white">ALPRO</span>
+                    <span class="text-[8px] tracking-widest text-slate-500 uppercase">International</span>
+                </div>
+            </div>
+            
+            <p class="text-slate-500 text-sm">© 2024 Alpro (HK) International Limited. All Rights Reserved.</p>
+            
+            <div class="flex gap-6 text-slate-500">
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Logic
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('nav-logo-text');
+        const navLinks = document.getElementById('nav-links');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled', 'py-4');
+                navbar.classList.remove('py-6');
+                logoText.classList.add('text-slate-900');
+                logoText.classList.remove('text-white');
+                navLinks.classList.add('text-slate-600');
+                navLinks.classList.remove('text-slate-300');
+            } else {
+                navbar.classList.remove('nav-scrolled', 'py-4');
+                navbar.classList.add('py-6');
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-slate-900');
+                navLinks.classList.add('text-slate-300');
+                navLinks.classList.remove('text-slate-600');
+            }
+        });
+
+        // Mobile Menu Logic (Placeholder)
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        mobileBtn.addEventListener('click', () => {
+            alert("Mobile menu toggled");
+        });
+    </script>
+</body>
+</html>
